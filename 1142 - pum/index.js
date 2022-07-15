@@ -2,23 +2,13 @@ var input = require("fs").readFileSync("index.txt", "utf8");
 var lines = input.split("\n");
 
 let n = parseInt(lines.shift());
-let linha = new Array(4);
-let numero = 1;
+let c1 = 1;
+let c2 = 2;
+let c3 = 3;
 
-for (let i = 0; i < 4; i++) {
-  for (let j = 0; j < n; j++) {
-    if (numero % 4 === 0) {
-      linha.push("PUM");
-    } else {
-      linha.push(numero);
-    }
-    numero++;
-    //console.log(linha);
-  }
-}
-
-for (let i = 0; i < 4; i++) {
-  for (let j = 0; j < n; j++) {
-    console.log(linha[i][j]);
-  }
+for (let i = 0; i < n; i++) {
+  console.log(c1 + " " + c2 + " " + c3 + " PUM");
+  c1 += 4;
+  c2 += 4;
+  c3 += 4;
 }
